@@ -1,0 +1,51 @@
+<H1>STATISTICHE</H1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"><button type="button" class="btn btn-primary" (click)="onTotal()" >Totale</button></div>
+            <div class="col-sm-3"><button type="button" class="btn btn-primary" (click)="onWeek()">Ultima Settimana</button></div>
+            <div class="col-sm-3"><button type="button" class="btn btn-primary" (click)="onMonth()">Ultimo Mese</button></div>    
+            <div class="col-sm-3"><button type="button" class="btn btn-primary" (click)="onYear()">Ultimo Anno</button></div>    
+        </div>    
+    </div>
+
+<ngb-alert class="alert alert-primary" [dismissible]="false">
+    <strong>{{visualType}}</strong>
+</ngb-alert>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Descrizione</th>
+          <th scope="col">Valutazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Valutazione Media</td>
+          <td>{{ valMedia }}</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Locale</td>
+          <td>{{ valLocale }}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Servizio</td>
+          <td>{{ valService }}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Menù</td>
+          <td>{{ valMenu }}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Costo</td>
+          <td>{{ valCosto }}</td>
+        </tr>
+      </tbody>
+</table>
